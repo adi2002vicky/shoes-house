@@ -19,14 +19,18 @@ import connectDB from "./config/db.js";
 import authRoutes from './routes/authRoute.js'
 import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
-import cors from "cors"
-import path from 'path'
+import cors from "cors";
+import path from 'path';
+import {fileURLToPath} from "url";
+
 
 //configure env
 dotenv.config();
 
 // database config
 connectDB();
+const _filename=fileURLToPath(import.meta.url);
+const _dirname = path.dirname(_filename);
 const PORT = process.env.PORT ||8080;
 // create rest object because we create a api 
 const app = express();
