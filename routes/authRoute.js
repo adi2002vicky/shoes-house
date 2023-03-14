@@ -8,7 +8,7 @@ import {
   getOrdersController,
   getAllOrdersController,
   orderStatusController,
-} from "../controllers/authController.js";
+} from;
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
 
 //router object
